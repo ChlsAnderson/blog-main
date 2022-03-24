@@ -18,7 +18,7 @@ export class FeedComponent implements OnInit {
   }
 
   findPosts() {
-    this.postService.getPosts().subscribe((data: Post[])=>{
+    this.postService.getPosts().subscribe((data: Post[]|any)=>{
       this.listPost = data;
     })
   }

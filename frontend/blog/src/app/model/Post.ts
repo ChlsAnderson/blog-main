@@ -1,7 +1,5 @@
 export class Post{
-
-    public id: number
-    public nome: string
-    public mensagem: string
-
+    public id: number | undefined
+    public nome: string | undefined
+    public mensagem: string | undefined
 }
