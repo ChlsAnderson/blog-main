@@ -10,6 +10,7 @@ import { Post } from '../model/Post';
 export class FeedComponent implements OnInit {
 
   listPost: undefined | Post[];
+  post: any;
 
   constructor(private postService: PostService) { }
 
@@ -20,6 +21,12 @@ export class FeedComponent implements OnInit {
   findPosts() {
     this.postService.getPosts().subscribe((data: Post[]|any)=>{
       this.listPost = data;
+    })
+  }
+
+  cadastrarMensagem(){
+    this.postService.postMensagem(this.post).subscribe((data: Post|any)=>{
+      this.post = data;
     })
   }
 }
