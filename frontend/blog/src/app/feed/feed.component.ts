@@ -27,6 +27,7 @@ export class FeedComponent implements OnInit {
   cadastrarMensagem(){
     this.postService.postMensagem(this.post).subscribe((data: Post|any)=>{
       this.post = data;
+      location.assign('/feed');
     })
   }
 }
