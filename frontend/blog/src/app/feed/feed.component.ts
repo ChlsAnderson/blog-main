@@ -10,7 +10,7 @@ import { Post } from '../model/Post';
 export class FeedComponent implements OnInit {
 
   listPost: undefined | Post[];
-  post: any;
+  post: Post = new Post;
 
   constructor(private postService: PostService) { }
 
